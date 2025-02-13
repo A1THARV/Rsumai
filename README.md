@@ -13,7 +13,7 @@
 
 ## Interfaces
 
-| Description | Widget |
+| Description | Images |
 | :-- | :-- |
 | **Overall Score and Skills Analysis:** Displays an overall score, with a radar chart illustrating strengths across technical skills, soft skills, leadership, education, and experience. | ![Overall Score and Skills Analysis](https://i.imgur.com/KOfgQJ6.png) |
 | **Soft Skills Analysis and Career Trajectory:** Highlights soft skills distribution and metrics like communication , teamwork , leadership potential , and professional tone. Career trajectory includes stability metrics, growth trends, and suggested next roles. | ![Soft Skills Analysis and Career Trajectory](https://i.imgur.com/yzQctUX.png) |
