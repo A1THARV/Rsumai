@@ -5,7 +5,7 @@
 <p id="description">Rsumai is an AI-powered resume analysis tool that helps job seekers optimize their resumes for better career opportunities. Using Gemini AI it evaluates key parameters and generates detailed insights to improve hiring chances.</p>
 
 ## 📌 Usage  
-1️⃣ **Upload your resume (PDF format).**  
+1️⃣ **Upload your resume (TXT fromat).**  
 2️⃣ **The AI extracts, analyzes, and scores the resume.**  
 3️⃣ **Get insights, keyword optimization, and improvement suggestions.**  
 4️⃣ **Refine your resume based on AI feedback.**  
@@ -68,7 +68,7 @@ npm run dev
 Technologies used in the project:
 
 *   React + TypeScript
-*   Vite
+*   Vite + Netlify
 *   Tailwind CSS
 *   Google Generative AI (Gemini)
 *   Recharts for data visualization
