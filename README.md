@@ -4,9 +4,11 @@
 
 <p id="description">Rsumai is an AI-powered resume analysis tool that helps job seekers optimize their resumes for better career opportunities. Using Gemini AI it evaluates key parameters and generates detailed insights to improve hiring chances.</p>
 
-<h2>🚀 Demo</h2>
-
-[https://rsumai.netlify.app/](https://rsumai.netlify.app/)
+## 📌 Usage  
+1️⃣ **Upload your resume (PDF format).**  
+2️⃣ **The AI extracts, analyzes, and scores the resume.**  
+3️⃣ **Get insights, keyword optimization, and improvement suggestions.**  
+4️⃣ **Refine your resume based on AI feedback.**  
 
 
 ## Interfaces
@@ -54,6 +56,10 @@ VITE_GEMINI_API_KEY=your_api_key_here
 npm run dev
 ```
 
+
+<h2>🚀 Demo</h2>
+
+[https://rsumai.netlify.app/](https://rsumai.netlify.app/)
 
   
   
