@@ -8,27 +8,25 @@
 
 [https://rsumai.netlify.app/](https://rsumai.netlify.app/)
 
-<h2>Project Screenshots:</h2>
 
-<img src="https://i.imgur.com/KOfgQJ6.png" alt="project-screenshot" width="1300" height="600/">
+## Interfaces
 
-<img src="https://i.imgur.com/Pvcz5RV.png" alt="project-screenshot" width="1300" height="600/">
+| Description | Widget |
+| :-- | :-- |
+| **Overall Score and Skills Analysis:** Displays an overall score, with a radar chart illustrating strengths across technical skills, soft skills, leadership, education, and experience. | ![Overall Score and Skills Analysis](https://i.imgur.com/KOfgQJ6.png) |
+| **Soft Skills Analysis and Career Trajectory:** Highlights soft skills distribution and metrics like communication , teamwork , leadership potential , and professional tone. Career trajectory includes stability metrics, growth trends, and suggested next roles. | ![Soft Skills Analysis and Career Trajectory](https://i.imgur.com/yzQctUX.png) |
+| **Experience Analysis and Education:** Shows key metrics such as role relevance, industry alignment, and career growth. Includes Key achievements, Education, certifications and Recommended certifications. | ![Experience Analysis and Education](https://i.imgur.com/4BoDAg7.png) |
+| **ATS Optimization:** Provides insights into keyword analysis for ATS compatibility, focusing on various terms. Highlights action verbs usage and missing keywords. Recommendations include tailoring resumes with specific keywords for better optimization. | ![ATS Optimization](https://i.imgur.com/cweQxcE.png) |
 
-<img src="https://i.imgur.com/yzQctUX.png" alt="project-screenshot" width="1300" height="600/">
 
-  
-  
-<h2>🧐 Features</h2>
-
-Here're some of the project's best features:
-
-*   AI-Powered Resume Scoring
-*   Technical Skill Breakdown
-*   Experience & Impact Evaluation
-*   Soft Skills & Leadership Analysis
-*   Keyword Optimization
-*   Career Growth Insights
-*   Improvement Suggestions
+## 🔍 Features  
+✅ **AI-Powered Resume Scoring** – Assigns an overall score based on resume quality.  
+✅ **Technical Skill Breakdown** – Analyzes programming languages, tools, and frameworks.  
+✅ **Experience & Impact Evaluation** – Highlights key achievements and their business impact.  
+✅ **Soft Skills & Leadership Analysis** – Assesses teamwork, problem-solving, and communication.  
+✅ **Keyword Optimization** – Matches resume content with job descriptions to improve ATS ranking.  
+✅ **Career Growth Insights** – Maps professional progress and suggests future career moves.  
+✅ **Improvement Suggestions** – Provides AI-driven feedback for optimizing the resume.  
 
 <h2>🛠️ Installation Steps:</h2>
 
