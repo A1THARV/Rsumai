@@ -170,9 +170,11 @@ CRITICAL INSTRUCTIONS:
 
 Analyze this resume text and provide the analysis in the EXACT format specified above:`;
 
-export async function analyzeResume(apiKey: string, resumeText: string): Promise<AnalysisResult> {
-  if (!apiKey.trim()) {
-    throw new Error('API key is required');
+export async function analyzeResume(resumeText: string): Promise<AnalysisResult> {
+  const apiKey = process.env.GEMINI_API_KEY;
+
+  if (!apiKey) {
+    throw new Error('Gemini API key not found in environment variables');
   }
 
   if (!resumeText.trim()) {
