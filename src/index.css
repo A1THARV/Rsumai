@@ -1,109 +1,128 @@
-export interface SkillDistribution {
-  category: string;
-  percentage: number;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 232 47% 5%;
+    --foreground: 210 40% 98%;
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 210 40% 98%;
+    --accent: 262 83% 58%;
+    --accent-foreground: 210 40% 98%;
+  }
+
+  .light {
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --primary: 221 83% 53%;
+    --primary-foreground: 210 40% 98%;
+    --accent: 262 83% 58%;
+    --accent-foreground: 210 40% 98%;
+  }
 }
 
-export interface Achievement {
-  description: string;
-  impact: number; // 0-100 impact score
-  metrics: string[];
-}
+@layer base {
+  body {
+    @apply bg-[#030014] text-foreground min-h-screen;
+    background-image: 
+      radial-gradient(at 27% 37%, hsla(215, 98%, 61%, 0.15) 0px, transparent 50%),
+      radial-gradient(at 97% 21%, hsla(256, 98%, 72%, 0.15) 0px, transparent 50%),
+      radial-gradient(at 52% 99%, hsla(354, 98%, 61%, 0.15) 0px, transparent 50%),
+      radial-gradient(at 10% 29%, hsla(256, 96%, 67%, 0.15) 0px, transparent 50%),
+      radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 0.15) 0px, transparent 50%),
+      radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 0.15) 0px, transparent 50%),
+      radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 0.15) 0px, transparent 50%);
+  }
 
-export interface CareerStability {
-  stabilityIndex: number; // 0-100
-  averageJobDuration: number; // in years
-  jobChanges: number;
-  growthTrend: number; // -100 to 100, negative indicates decline
-}
+  .acrylic-card {
+    @apply bg-white/[0.02] backdrop-blur-[20px] border border-white/[0.05] shadow-[0_8px_32px_0_rgba(0,0,0,0.36)];
+    background-image: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.05) 0%,
+      rgba(255, 255, 255, 0.02) 40%,
+      rgba(255, 255, 255, 0.01) 80%
+    );
+  }
 
-export interface DocumentStructure {
-  lengthScore: number; // 0-100
-  contentSpaceRatio: number; // 0-100
-  sectionOrganization: number; // 0-100
-  readabilityScore: number; // 0-100
-  formatCompliance: number; // 0-100
-}
+  .acrylic-blur {
+    @apply bg-white/[0.03] backdrop-blur-[16px] border border-white/[0.05];
+    background-image: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.03) 0%,
+      rgba(255, 255, 255, 0.01) 100%
+    );
+  }
 
-export interface ATSAnalysis {
-  compatibility: number; // 0-100
-  keywordDensity: {
-    keyword: string;
-    count: number;
-    density: number; // percentage
-  }[];
-  actionVerbUsage: {
-    verb: string;
-    count: number;
-  }[];
-  missingKeywords: string[];
-}
+  .glassmorphism {
+    @apply bg-gradient-to-br from-white/[0.07] to-white/[0.03] backdrop-blur-[12px] border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.36)];
+  }
 
-export interface AnalysisResult {
-  overallScore: number;
-  technicalSkills: {
-    programmingLanguages: string[];
-    frameworks: string[];
-    tools: string[];
-    proficiencyLevels: {
-      overall: number;
-      languages: number;
-      frameworks: number;
-      tools: number;
-    };
-    skillDistribution: SkillDistribution[];
-    missingCriticalSkills: string[];
-    industryDemandAlignment: number; // 0-100
-  };
-  experience: {
-    totalYears: number;
-    roleRelevance: number;
-    industryAlignment: number;
-    achievements: Achievement[];
-    careerProgression: {
-      logic: number; // 0-100 score for progression logic
-      growthRate: number; // 0-100
-      nextLevelGap: string[];
-    };
-  };
-  education: {
-    degrees: string[];
-    certifications: string[];
-    relevance: number;
-    certificationImpact: {
-      name: string;
-      impact: number; // 0-100
-    }[];
-    recommendedCertifications: string[];
-    educationStrength: number; // 0-100
-  };
-  softSkills: {
-    skills: string[];
-    distribution: SkillDistribution[];
-    communication: number; // 0-100
-    teamwork: number; // 0-100
-    leadershipPotential: number; // 0-100
-    professionalTone: number; // 0-100
-  };
-  leadership: string[];
-  projectHighlights: {
-    name: string;
-    impact: number; // 0-100
-    technologies: string[];
-    keyAchievements: string[];
-  }[];
-  careerTrajectory: {
-    stability: CareerStability;
-    nextMoveRecommendations: string[];
-    futureRoleGaps: string[];
-    growthOpportunities: string[];
-  };
-  documentStructure: DocumentStructure;
-  atsOptimization: ATSAnalysis;
-  improvements: string[];
-  keywords: string[];
-}
+  .card-hover {
+    @apply transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.37)];
+  }
 
-export interface ChartData {
-  name: string;
-  value: number;
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400;
+  }
+
+  .gradient-border {
+    @apply relative;
+    &::before {
+      content: '';
+      @apply absolute inset-0 rounded-lg p-[1px] bg-gradient-to-r from-blue-500/50 via-purple-500/50 to-pink-500/50 -z-10;
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask-composite: exclude;
+    }
+  }
+
+  /* Skeleton Loading */
+  .skeleton {
+    @apply animate-pulse bg-white/5 rounded;
+  }
+
+  /* Score Animation */
+  .score-reveal {
+    @apply opacity-0 translate-y-4;
+    animation: scoreReveal 0.6s ease-out forwards;
+  }
+
+  @keyframes scoreReveal {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Accessibility */
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:ring-offset-2 focus:ring-offset-[#030014];
+  }
+
+  /* Micro-interactions */
+  .hover-lift {
+    @apply transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_8px_32px_0_rgba(31,38,135,0.37)];
+  }
+
+  /* Chart customization */
+  .recharts-wrapper {
+    @apply !font-sans;
+  }
+
+  .recharts-text {
+    @apply !fill-gray-400;
+  }
+
+  .recharts-cartesian-grid-horizontal line,
+  .recharts-cartesian-grid-vertical line {
+    @apply !stroke-gray-700/50;
+  }
+
+  .recharts-tooltip-wrapper {
+    @apply !bg-[#030014]/80 !backdrop-blur-md !border !border-white/10 !rounded-lg !shadow-xl;
+  }
 }
