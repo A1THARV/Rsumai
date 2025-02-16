@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Upload, Sparkles, Brain, Target, Zap, Bot } from 'lucide-react';
+import { Upload, Sparkles, Brain, Target, Zap, Bot, Star } from 'lucide-react';
 import { analyzeResume } from './services/gemini';
 import { AnalysisDashboard } from './components/AnalysisDashboard';
 import { ThemeToggle } from './components/ThemeToggle';
@@ -14,7 +14,7 @@ function App() {
 
   const features = [
     {
-      icon: <Brain className="w-6 h-6 text-blue-400" />,
+      icon: <Brain className="w-6 h-6 text-red-400" />,
       title: "AI-Powered Analysis",
       description: "Advanced machine learning algorithms analyze your resume in seconds"
     },
@@ -24,7 +24,7 @@ function App() {
       description: "Ensure your resume passes Applicant Tracking Systems"
     },
     {
-      icon: <Sparkles className="w-6 h-6 text-pink-400" />,
+      icon: <Sparkles className="w-6 h-6 text-blue-400" />,
       title: "Skill Assessment",
       description: "Detailed analysis of technical and soft skills"
     },
@@ -63,22 +63,28 @@ function App() {
       <header className="glassmorphism sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8 flex justify-between items-center">
           <div className="flex items-center gap-2">
-            <Bot className="w-8 h-8 text-blue-400" />
+            <Bot className="w-8 h-8 text-red-400" />
             <h1 className="text-3xl font-bold gradient-text">
               Rsumai
             </h1>
           </div>
-          <ThemeToggle />
+          <div className="flex items-center gap-4">
+            <div className="stats-card">
+              <Star className="w-4 h-4 text-yellow-400" />
+              <span className="text-sm text-gray-300">115+ happy clients</span>
+            </div>
+            <ThemeToggle />
+          </div>
         </div>
       </header>
 
       <main className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
         {!result && (
-          <div className="mb-12 text-center">
-            <h2 className="text-4xl font-bold mb-6 gradient-text">
-              Your AI Resume Analysis Assistant
+          <div className="mb-12 text-center hero-glow">
+            <h2 className="text-6xl font-bold mb-6 gradient-text leading-tight max-w-4xl mx-auto">
+              Ready to Transform Your Resume with AI?
             </h2>
-            <p className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
               Unlock your career potential with our advanced AI-powered resume analysis. Get detailed insights and recommendations in seconds.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
@@ -101,7 +107,7 @@ function App() {
           {/* Resume Input */}
           <div className="acrylic-card rounded-lg p-6 gradient-border">
             <div className="flex items-center gap-2 mb-4">
-              <Upload className="w-5 h-5 text-blue-400" />
+              <Upload className="w-5 h-5 text-red-400" />
               <h2 className="text-lg font-semibold gradient-text">Resume Text</h2>
             </div>
             <textarea
@@ -111,14 +117,21 @@ function App() {
               className="w-full h-48 px-4 py-2 rounded-md acrylic-blur focus-ring resize-none placeholder:text-gray-500"
               aria-label="Resume text input"
             />
-            <div className="mt-4">
+            <div className="mt-4 flex gap-4">
               <button
                 onClick={handleAnalyze}
                 disabled={loading}
-                className="px-6 py-2 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white rounded-md transition-all hover-lift focus-ring disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:transform-none"
+                className="cta-button"
                 aria-label={loading ? 'Analyzing resume...' : 'Analyze resume'}
               >
                 {loading ? 'Analyzing...' : 'Analyze Resume'}
+              </button>
+              <button
+                onClick={() => setResumeText('')}
+                className="secondary-button"
+                aria-label="Clear resume text"
+              >
+                Clear
               </button>
             </div>
             {error && (
